@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="header">
+    <h1>Municipality Services Application</h1>
+</div>
+
+<div class="centered-content">
+    <div class="menu-container">
+        <h2>Main Menu</h2>
+        <p>Please select an option to proceed:</p>
+
+        <div class="button-group">
+            <a href="@Url.Action("ReportIssues", "Home")" class="btn btn-report-issues">Report Issues</a>
+            <a href="@Url.Action("LocalEvents", "Home")" class="btn btn-local-events">Local Events</a>
+            <a href="@Url.Action("ServiceRequestStatus", "Home")" class="btn btn-service-request">Service Request Status</a>
+        </div>
+    </div>
+</div>
+<!-- reference:( https://www.youtube.com/watch?v=bx6T2TglpH8, 2016)-->
+<style>
+    body {
+        background-color: #f0f0f0; 
+        margin: 0;
+        font-family: Arial, sans-serif; 
+    }
+
+    .header {
+        background-color: #d3d3d3; 
+        border: 2px solid #a9a9a9; 
+        padding: 10px 20px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .centered-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        color: #333;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .menu-container {
+        background-color: #ffffff; 
+        border: 2px solid yellow; 
+        border-radius: 8px; 
+        padding: 20px; 
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+        text-align: center; 
+        color: #333; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+        position: relative; 
+    }
+
+        .menu-container:hover {
+            transform: scale(1.05); 
+            box-shadow: 0px 6px 20px yellow (0, 0, 0, 0.5); 
+            background-color: #ffffff; 
+            color: yellow; 
+        }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 2.5em; 
+    }
+
+    .button-group {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .btn-report-issues,
+    .btn-local-events,
+    .btn-service-request {
+        padding: 8px 15px; 
+        font-size: 0.9em; 
+        border-radius: 4px; 
+        display: inline-block; 
+    }
+
+    .btn-report-issues {
+        background-color: #FF0000;
+        border-color: #FF0000;
+        color: white;
+        text-decoration: none; 
+    }
+
+    .btn-local-events {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+        text-decoration: none; 
+    }
+
+    .btn-service-request {
+        background-color: #4caf50;
+        border-color: #4caf50;
+        color: white;
+        text-decoration: none; 
+    }
+    <!-- reference: https://stackoverflow.com/questions/27555515/textbox-css-hover-and-button-display-asp-net-c-sharp, 2015 -->
+    .btn-report-issues:hover {
+        background-color: #cc0000;
+        border-color: #cc0000;
+    }
+    <!-- reference: https://stackoverflow.com/questions/27555515/textbox-css-hover-and-button-display-asp-net-c-sharp, 2015 -->
+    .btn-local-events:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    <!-- reference: https://stackoverflow.com/questions/27555515/textbox-css-hover-and-button-display-asp-net-c-sharp, 2015 -->
+    .btn-service-request:hover {
+        background-color: #388e3c;
+        border-color: #388e3c;
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+

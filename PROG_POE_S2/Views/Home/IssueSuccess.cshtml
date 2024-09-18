@@ -1,0 +1,137 @@
+﻿@model List<PROG_POE_S2.Models.Issue>
+
+@{
+    ViewData["Title"] = "Issue Report Success";
+}
+
+<div class="container">
+    <h2 class="success-message">@ViewBag.SuccessMessage</h2>
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <!--reference:  https://stackoverflow.com/questions/40709825/visual-studio-mvc-5-creating-table-with-data-from-different-models-tables -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Issue ID</th>
+                    <th>Location</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Media</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var issue in Model)
+                {
+                    <tr>
+                        <td>@issue.Id</td>
+                        <td>@issue.Location</td>
+                        <td>@issue.Category</td>
+                        <td>@issue.Description</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(issue.MediaPath))
+                            {
+                                <a href="@issue.MediaPath" target="_blank" class="media-link">View Media</a>
+                            }
+                            else
+                            {
+                                <span>No media attached</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No issues reported yet.</p>
+    }
+
+    <!-- Button to go back to the ReportIssues page -->
+    <div class="btn-container">
+        <a href="@Url.Action("ReportIssues", "Home")" class="btn-back">Back to Report Issue</a>
+    </div>
+</div>
+<!-- reference:( https://www.youtube.com/watch?v=bx6T2TglpH8, 2016)-->
+<style>
+   
+    .container {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    
+    table.table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+        table.table th, table.table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        table.table th {
+            background-color: #388e3c;
+            color: white;
+        }
+
+        table.table td {
+            background-color: #ffffff;
+        }
+
+    .media-link {
+        color: #388e3c;
+        text-decoration: none;
+    }
+
+        .media-link:hover {
+            text-decoration: underline;
+        }
+
+    
+    .btn-back {
+        background-color: #FF0000;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    <!-- reference: https://stackoverflow.com/questions/27555515/textbox-css-hover-and-button-display-asp-net-c-sharp, 2015 -->
+    .btn-back:hover {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+
+    .btn-container {
+        margin-top: 20px;
+    }
+
+    
+    .success-message {
+        color: #28a745; 
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 30px #28a745;
+    }
+
+    p {
+        color: #666;
+        font-size: 16px;
+    }
+</style>
+
+
+
+
+
+
