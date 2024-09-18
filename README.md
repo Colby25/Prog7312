@@ -7,7 +7,8 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 •	Report issues (implemented)
 •	Service request status (disabled)
 •	Local events and anouncements (disabled)
- 
+ ![image](https://github.com/user-attachments/assets/f102856f-5ea6-43dd-83d7-0daa0ba9bc56)
+
 2.	### Report Issues: Issues can be reported through the following:
 •	Location input: a simble textbox for users to input the location of the issue
 •	Category selection: A dropdown for selecting the following categorys: sanitization, roads, utilities, infrastructure.
