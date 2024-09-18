@@ -5,7 +5,9 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 # Features
 1.	### Main menu: On startup the user will be presented with 3 options to choose from 
 •	Report issues (implemented)
+
 •	Service request status (disabled)
+
 •	Local events and anouncements (disabled)
  ![image](https://github.com/user-attachments/assets/f102856f-5ea6-43dd-83d7-0daa0ba9bc56)
 
