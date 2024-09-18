@@ -13,10 +13,15 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 
 2.	### Report Issues: Issues can be reported through the following:
 •	Location input: a simble textbox for users to input the location of the issue
+
 •	Category selection: A dropdown for selecting the following categorys: sanitization, roads, utilities, infrastructure.
+
 •	Description: A richTextbox where users can provide a in depth explanation of the issue.
+
 •	Media attachment: a button where users can attach images regarding the issue.
+
 •	Engagement feature: A progress bar with a motivational message which fills as the user inputs their data this encourages participation and user engagement. 
+
 •	After submission the user is redirected to a Issue Success page where they can view all previous submitted issues, displayed in a table.
  ![image](https://github.com/user-attachments/assets/78fb6f9a-c598-42d2-9dc0-b66190b10cb9)
 
