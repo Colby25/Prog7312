@@ -24,12 +24,12 @@ The project was built in .NET Core MVC web application, its main goal is to enab
  ![image](https://github.com/user-attachments/assets/23ac9afb-5a75-4c1b-8095-5e29ea8ff5d3)
 
 # Design considerations:
-Consistency: the pages are color themed for example the Report issue page is red, the main menu page is yellow themed, the events page is blue and the service request status in green 
-Clarity: all the buttons and layoput feature like the containers, have a hover feature for it to stand out to the user and easily navigate through the application.
+•Consistency: the pages are color themed for example the Report issue page is red, the main menu page is yellow themed, the events page is blue and the service request status in green 
+•Clarity: all the buttons and layoput feature like the containers, have a hover feature for it to stand out to the user and easily navigate through the application.
 
 # Technical requirements:
-User reported issues are stored using a dictionary data structure 
-Feedback mechanisms are provided for example when a user does not input a required field in the report issues page and presses the submit button, the user will be prompted to input that field.
+•User reported issues are stored using a dictionary data structure.
+•Feedback mechanisms are provided for example when a user does not input a required field in the report issues page and presses the submit button, the user will be prompted to input that field.
  ![image](https://github.com/user-attachments/assets/ea3ed0d4-0cf6-404c-85d5-2215df5285c4)
 
 # Prerequsites:
