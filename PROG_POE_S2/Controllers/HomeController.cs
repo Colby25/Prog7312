@@ -27,8 +27,8 @@ namespace PROG_POE_S2.Controllers
         }
         //references: (https://khalidabuhakmeh.com/submitting-a-dictionary-to-an-asp-net-mvc-action , 2015)
         // Dictionary to store reported issues, with issue ID as the key
-        public static Dictionary<int, Issue> IssuesDictionary = new Dictionary<int, Issue>();
-        private static int _nextId = 1; // generates unique IDs for issues
+        public static Dictionary<int, Issue> IssuesDictionary = new Dictionary<int, Issue>(); //stores issueobject using IssueID as the key
+        private static int _nextId = 1; // generates unique IDs for issues (acts as a counter), value is incremented with every new isssue submission
 
         // Method to load the Report Issues view
         public IActionResult ReportIssues()

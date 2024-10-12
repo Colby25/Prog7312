@@ -1,0 +1,110 @@
+﻿@model PROG_POE_S2.Models.LocalEventsViewModel
+
+@{
+    ViewData["Title"] = "Local Events";
+}
+
+<div class="header">
+    <h2>Local Events and Announcements</h2>
+</div>
+
+<div class="container">
+    <div class="d-flex">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">Back to Main Menu</a>
+    </div>
+
+    <div class="search-section mt-4">
+        <h4>Search Events</h4>
+        <form method="get" action="@Url.Action("SearchEvents", "Events")">
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" class="form-control">
+                    <option value="all">All Categories</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="education">Education</option>
+                    <option value="community">Community</option>
+                </select>
+            </div>
+            <div class="form-group mt-3">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Search</button>
+        </form>
+    </div>
+
+    <div class="events-section mt-5">
+        <h4>Upcoming Events</h4>
+        <div class="events-list">
+            @if (Model.Events != null && Model.Events.Any())
+            {
+                @foreach (var eventItem in Model.Events)
+                {
+                    <div class="event-card mb-3">
+                        <h5>@eventItem.Title</h5>
+                        <p>@eventItem.Description</p>
+                        <p><strong>Date:</strong> @eventItem.Date.ToString("dd MMM yyyy")</p>
+                        <p><strong>Category:</strong> @eventItem.Category</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No upcoming events found.</p>
+            }
+        </div>
+    </div>
+
+    <div class="recommendations-section mt-5">
+        <h4>Recommended Events</h4>
+        <div class="recommendation-list">
+            @if (Model.RecommendedEvents != null && Model.RecommendedEvents.Any())
+            {
+                @foreach (var recommendation in Model.RecommendedEvents)
+                {
+                    <div class="recommendation-card mb-3">
+                        <h5>@recommendation.Title</h5>
+                        <p>@recommendation.Description</p>
+                        <p><strong>Date:</strong> @recommendation.Date.ToString("dd MMM yyyy")</p>
+                        <p><strong>Category:</strong> @recommendation.Category</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No recommended events at the moment.</p>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .search-section, .events-section, .recommendations-section {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .event-card, .recommendation-card {
+        padding: 15px;
+        border: 1px solid #007bff;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+        .event-card h5, .recommendation-card h5 {
+            color: #007bff;
+        }
+
+    .container {
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
+</style>
