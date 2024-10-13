@@ -4,9 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PROG_POE_S2</title>
+
+    <link rel="preload" href="~/lib/bootstrap/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="~/css/site.css" as="style" />
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PROG_POE_S2.styles.css" asp-append-version="true" />
+
+    <!-- Added fade-in effect to the body to avoid flashes -->
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+
+            body.loaded {
+                opacity: 1;
+            }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +37,7 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                         </li>
-                        <li class="nav-item">   
+                        <li class="nav-item">
                         </li>
                     </ul>
                 </div>
@@ -34,14 +50,24 @@
         </main>
     </div>
 
+    <!--
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - PROG_POE_S2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Added smooth transition effect after page load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

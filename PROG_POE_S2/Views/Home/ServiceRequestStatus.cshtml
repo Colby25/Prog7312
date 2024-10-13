@@ -5,23 +5,22 @@
     <h2>Service Request Status</h2>
 </div>
 
-<div class="container">
-    <div class="d-flex">
-        <p>(coming soon).</p>
-        <a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">Back to Main Menu</a>
+<div class="centered-content">
+    <div class="menu-container">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-service-request">Back to Main Menu</a>
     </div>
 </div>
 
 <style>
     body {
-        background-color: #f0f0f0; 
+        background-color: #f0f0f0;
         margin: 0;
-        font-family: Arial, sans-serif; 
+        font-family: Arial, sans-serif;
     }
 
     .header {
-        background-color: #4caf50; 
-        border: 2px solid #388e3c; 
+        background-color: #4caf50;
+        border: 2px solid #4caf50;
         padding: 10px 20px;
         text-align: center;
         position: absolute;
@@ -29,29 +28,45 @@
         left: 0;
         right: 0;
         width: 100%;
-        box-sizing: border-box; 
-        margin: 0;
+        box-sizing: border-box;
     }
 
-        .header h2 {
-            color: black; 
-            margin: 0;
-        }
-
-    .container {
-        padding-top: 60px; 
-    }
-
-    .d-flex {
+    .centered-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        margin-top: -10%; 
+        justify-content: center;
+        height: 100vh;
+        color: #333;
+        text-align: center;
+        margin-top: 60px;
     }
 
-    .btn-secondary {
+    .menu-container {
+        background-color: #ffffff;
+        border: 2px solid #4caf50;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: #333;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        position: relative;
+    }
+
+        .menu-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px #4caf50 (0, 0, 0, 0.5);
+            background-color: #ffffff;
+            color: #4caf50;
+        }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 2.5em;
+    }
+
+    .btn-service-request {
         background-color: #4caf50;
         border-color: #4caf50;
         color: white;
@@ -62,12 +77,9 @@
         display: inline-block;
     }
 
-        .btn-secondary:hover {
-            background-color: #388e3c; 
-            border-color: #4caf50;
+        .btn-service-request:hover {
+            background-color: #388e3c;
+            border-color: #388e3c;
         }
+
 </style>
-
-
-
-
