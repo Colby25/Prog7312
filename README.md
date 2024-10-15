@@ -8,7 +8,7 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 
   •	Service request status (disabled)
 
-  •	Local events and anouncements (disabled)
+  •	Local events and anouncements (implemented)
 
  ![image](https://github.com/user-attachments/assets/f102856f-5ea6-43dd-83d7-0daa0ba9bc56)
 
@@ -34,6 +34,23 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 
  ![image](https://github.com/user-attachments/assets/23ac9afb-5a75-4c1b-8095-5e29ea8ff5d3)
 
+4. ### Local events page:
+   •	Users can now navigate to the events page from the main menu page by clicking the blue button.
+
+  • users can view all the upcoming events, and see the dates on the calender
+
+  •	Users can filter the events by selecting date and category, this will display the events in that category
+
+  •	If a user selects a specific date for the category that event will show up and all the other events on th ediffernt dates for that same category will be displayed as recommended events.
+
+  •	The events are displayed in a aestetically pleasing manner , with cool hover effects that make them more visible.
+
+  ![Screenshot (527)](https://github.com/user-attachments/assets/a7f771af-23a2-45a4-b318-77bead54e5ae)
+
+  ![Screenshot (532)](https://github.com/user-attachments/assets/1f5073ba-073f-4689-a878-0d5d20c85262)
+
+  ![Screenshot (533)](https://github.com/user-attachments/assets/42c956fc-03c4-44a7-9bca-6cdb14484824)
+   
 # Design considerations:
   •Consistency: the pages are color themed for example the Report issue page is red, the main menu page is yellow themed, the events page is blue and the service request status in green 
 
@@ -67,10 +84,6 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 7.	To submit another report, use the back button to return to the issue reporting form.
 
 # Future Features
-  •	Local Events and Announcements (to be implemented).
-
- ![image](https://github.com/user-attachments/assets/fdf8e878-f0d0-4c20-8dc6-1fb7abd76cde)
-
   •	Service Request Status (to be implemented).
 
 ![image](https://github.com/user-attachments/assets/d5a338b1-f73c-4887-9d9a-34f71d5c4589)
