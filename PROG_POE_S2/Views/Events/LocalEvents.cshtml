@@ -21,7 +21,7 @@
                 <select id="category" name="category" class="form-control ml-2">
                     <option value="all">All Categories</option>
                     <option value="sports">Sports</option>
-                    <option value="music">Music</option>
+                    <option value="festival">Festival</option>
                     <option value="education">Education</option>
                     <option value="community">Community</option>
                 </select>
@@ -37,14 +37,13 @@
     <div class="d-flex justify-content-between mt-5">
         <div class="events-section" style="flex: 1; margin-right: 20px;">
             <h4>Upcoming Events</h4>
-            <div class="events-list">
+            <div class="events-list scrollable-section">
                 @if (Model.Events != null && Model.Events.Any())
                 {
                     @foreach (var eventItem in Model.Events)
                     {
                         <div class="event-card mb-3">
-                            <i class="bi bi-calendar-event event-icon"></i>
-                            <h5>@eventItem.Title <span class="badge badge-primary">@eventItem.Category</span></h5>
+                            <h5>@eventItem.Title</h5>
                             <p>@eventItem.Description</p>
                             <p><strong>Date:</strong> @eventItem.Date.ToString("dd MMM yyyy")</p>
                         </div>
@@ -63,26 +62,28 @@
         </div>
     </div>
 
-    <div class="recommendations-section mt-5">
-        <h4>Recommended Events</h4>
-        <div class="recommendation-list">
-            @if (Model.RecommendedEvents != null && Model.RecommendedEvents.Any())
-            {
-                @foreach (var recommendation in Model.RecommendedEvents)
+    <div class="d-flex justify-content-between mt-5">
+        <div class="recommendations-section" style="flex: 1; margin-right: 20px;">
+            <h4>Recommended Events</h4>
+            <div class="recommendation-list scrollable-section">
+                @if (Model.RecommendedEvents != null && Model.RecommendedEvents.Any())
                 {
-                    <div class="recommendation-card mb-3">
-                        <i class="bi bi-star-fill recommendation-icon"></i>
-                        <h5>@recommendation.Title <span class="badge badge-warning">@recommendation.Category</span></h5>
-                        <p>@recommendation.Description</p>
-                        <p><strong>Date:</strong> @recommendation.Date.ToString("dd MMM yyyy")</p>
-                    </div>
+                    @foreach (var recommendation in Model.RecommendedEvents)
+                    {
+                        <div class="recommendation-card mb-3">
+                            <h5>@recommendation.Title</h5>
+                            <p>@recommendation.Description</p>
+                            <p><strong>Date:</strong> @recommendation.Date.ToString("dd MMM yyyy")</p>
+                        </div>
+                    }
                 }
-            }
-            else
-            {
-                <p>No recommended events at the moment.</p>
-            }
+                else
+                {
+                    <p>No recommended events at the moment.</p>
+                }
+            </div>
         </div>
+
     </div>
 </div>
 
@@ -106,7 +107,7 @@
         box-sizing: border-box;
     }
 
-    .search-section, .events-section, .recommendations-section, .calendar-section {
+    .search-section, .events-section, .recommendations-section, .calendar-section, .most-searched-section {
         margin-bottom: 20px;
         padding: 30px;
         background-color: white;
@@ -114,42 +115,39 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+        .events-section h4, .calendar-section h4, .recommendations-section h4, .most-searched-section h4 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .search-section h4 {
+            font-weight: bold;
+        }
+
     .form-group {
         margin-bottom: 15px;
     }
 
-    .event-card, .recommendation-card {
-        padding: 15px;
+    .event-card, .recommendation-card, .most-searched-card {
+        padding: 20px 10px 10px 20px;
+        margin: 10px;
         border: 1px solid #007bff;
         border-radius: 8px;
         background-color: #f8f9fa;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-        position: relative;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.4s ease, transform 0.4s ease;
+        max-width: 95%;
     }
 
-    .event-icon, .recommendation-icon {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        font-size: 24px;
-        color: #007bff;
-    }
+        .event-card h5, .recommendation-card h5, .most-searched-card h5 {
+            color: #0056b3;
+        }
 
-    .event-card h5, .recommendation-card h5 {
-        color: #007bff;
-        margin-left: 45px;
-    }
-
-    .event-card:hover, .recommendation-card:hover {
-        box-shadow: 0 0 15px rgba(0, 63, 127, 0.6);
-        transform: scale(1.02);
-        background-color: #f1f1f1;
-    }
-
-    .badge {
-        margin-left: 10px;
-    }
+        .event-card:hover, .recommendation-card:hover, .most-searched-card:hover {
+            box-shadow: 0 0 30px rgba(0, 63, 127, 0.9);
+            transform: scale(1.01);
+            background-color: #bbdefb;
+        }
 
     .container {
         padding: 20px;
@@ -165,13 +163,24 @@
 
     #calendar {
         width: 100%;
-        height: 400px;
+        height: 95%; 
         border: 1px solid #007bff;
         border-radius: 8px;
         background-color: #f8f9fa;
+        transition: box-shadow 0.4s ease, transform 0.4s ease;
+    }
+
+        #calendar:hover {
+            box-shadow: 0 0 30px rgba(0, 63, 127, 0.9);
+            transform: scale(1.01);
+        }
+
+    .scrollable-section {
+        max-height: 475px;
+        overflow-y: auto;
     }
 </style>
-
+<!-- reference: FullCalendar. (n.d.). FullCalendar Documentation. Retrieved from https://fullcalendar.io/docs -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
 
