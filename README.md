@@ -67,7 +67,10 @@ The project was built in .NET Core MVC web application, its main goal is to enab
     • Enter the service request ID in the provided form and click the "Track" button.
     • Results, including related service requests, are displayed if applicable.
     • Specify a start ID for graph traversal, and the BFS traversal results will be shown.
-  
+   ![Screenshot 2024-11-18 220910](https://github.com/user-attachments/assets/fbec6873-01a9-4523-b95f-ea59eb0cf886)
+   ![Screenshot 2024-11-18 220939](https://github.com/user-attachments/assets/b5c95e8d-eedf-43e1-a013-d5a3843e60d4)
+   ![Screenshot 2024-11-18 220926](https://github.com/user-attachments/assets/9825c210-bda0-44ce-9e8e-bec3042dadce)
+
    # In-depth Explanation of Data Structures: 
 1.	## Binary Search Tree (BST) Explanation:
 	#### Role:
