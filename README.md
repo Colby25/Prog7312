@@ -10,11 +10,11 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 # How to Compile:
 1. Clone the repo using the web URL in the GitHub repository
 2. Open Visual Studio.
-3. Click on File → Clone Repository.
+3. Click on File - Clone Repository.
 4. Enter the repository URL: https://github.com/Colby25/Prog7312.git
 5. Click Clone. 
 6. After cloning, Visual Studio should automatically open the project.
-7. If not, go to File → Open → Project/Solution, and then navigate to the .sln file in the cloned project folder.
+7. If not, go to File - Open - Project/Solution, and then navigate to the .sln file in the cloned project folder.
 8. If you encounter build errors, ensure all packages are restored by right-clicking on the solution in the Solution Explorer and selecting "Restore NuGet Packages".
 
 # How to Run the Program:
