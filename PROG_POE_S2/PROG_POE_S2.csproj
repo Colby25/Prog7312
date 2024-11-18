@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="sessions\" />
+    <Folder Include="Views\ServiceRequest\" />
     <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 
