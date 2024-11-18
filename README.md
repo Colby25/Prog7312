@@ -78,7 +78,7 @@ The project was built in .NET Core MVC web application, its main goal is to enab
   example, the description & status. 
 	#### Contribution to Efficiency:
 	The binary search tree is efficient for operations like inserting, deleting, and tracking with a time complexity of O(log ). Thus for the scenario of tracking a service request 
-  status, this efficiency makes it possible to quickly track service requests using the ID / the unique identifier.
+  status, this efficiency makes it possible to quickly track service requests using the ID / the unique identifier (Testbook, n.d.).
 	#### Example:
   A node can quickly be tracked through a binary search, for example when a user wants to track a service request with ID 2, it can quickly be located, and it is then not needed to traverse the whole list of 
   requests. Especially in large datasets, the BST is a lot faster in comparison to linear search. Example:	You search for ID 4 in the BST, which returns:
@@ -91,9 +91,9 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 3.	## Graph Traversal using Breadth-First Search (BFS) Explanation:
   #### Role:	
   Relationships between the service request are represented through the use of a graph data structure, in this case where nodes are service requests and edges represent connections, like related tasks for 
-  example. These connections are explored layer by layer using Breadth first search, and the start point is from the node that’s specified / or known as the service request in this scenario.
+  example. These connections are explored layer by layer using Breadth first search, and the start point is from the node that’s specified / or known as the service request in this scenario (McKee, 2024).
   #### Contribution to Efficiency:
-  BFS finds the shortest path, related service request, by making sure all the nodes at the current level are visited before going to the next level.
+  BFS finds the shortest path, related service request, by making sure all the nodes at the current level are visited before going to the next level (McKee, 2024).
   #### For example:
   The BFS traversal will start at the node which a user selects let's say a user selects a service request with an ID of 2, it will then explore all directly related requests before going to the next level of 
   related nodes. This will help users to identify and view all linked service requests related to one another. Example: You performed a graph traversal starting at ID 4, which used BFS to explore all connected 
@@ -105,5 +105,10 @@ The project was built in .NET Core MVC web application, its main goal is to enab
   "Service Request ID: 3"
    The BFS started at 4, then moved to its connected nodes 1 and 5, then explored their connections: ( 2 from 1, and 3 from 2), resulting in the output above.
 
+# References:
+Testbook. (n.d.). Binary Search Tree (BST): Basics and Implementation Techniques. [online] Available at: https://testbook.com/maths/binary-search-tree. [Accessed 18 Nov. 2024].
+McKee, A. (2024). Breadth-First Search in Python: A Guide with Examples. [online] Datacamp.com. Available at: https://www.datacamp.com/tutorial/breadth-first-search-in-python [Accessed 18 Nov. 2024].
 
+‌
+‌
 
