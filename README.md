@@ -25,9 +25,9 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 
 # How to Use
 1.	### Main menu: On startup the user will be presented with 3 options to choose from 
-    - Report issues (implemented)
-    -	Service request status (implemented)
-    - Local events and anouncements (implemented)
+    1.1 Report issues (implemented)
+    1.2	Service request status (implemented)
+    1.3 Local events and anouncements (implemented)
 ![Screenshot (534)](https://github.com/user-attachments/assets/bf15f0e7-50c1-479a-9cef-c7be2ef3c807)
 
 2. ### Report Issues: Issues can be reported through the following:
