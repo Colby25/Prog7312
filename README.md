@@ -31,13 +31,13 @@ The project was built in .NET Core MVC web application, its main goal is to enab
 ![Screenshot (534)](https://github.com/user-attachments/assets/bf15f0e7-50c1-479a-9cef-c7be2ef3c807)
 
 2. ### Report Issues: Issues can be reported through the following:
-   - Location input: a simble textbox for users to input the location of the issue
-   - Category selection: A dropdown for selecting the following categorys: sanitization, roads, utilities, infrastructure.
-   - Description: A richTextbox where users can provide a in depth explanation of the issue.
-   - Media attachment: a button where users can attach images regarding the issue.
-   - Engagement feature: A progress bar with a motivational message which fills as the user inputs their data this encourages participation and user engagement. 
-   -	After submission the user is redirected to a Issue Success page where they can view all previous submitted issues, displayed in a table.
-   -	To submit another report, use the back button to return to the issue reporting form.
+   •	Location input: a simble textbox for users to input the location of the issue
+   •	Category selection: A dropdown for selecting the following categorys: sanitization, roads, utilities, infrastructure.
+   •	Description: A richTextbox where users can provide a in depth explanation of the issue.
+   •	Media attachment: a button where users can attach images regarding the issue.
+   •	Engagement feature: A progress bar with a motivational message which fills as the user inputs their data this encourages participation and user engagement.
+   •	After submission the user is redirected to a Issue Success page where they can view all previous submitted issues, displayed in a table.
+   •	To submit another report, use the back button to return to the issue reporting form.
  ![image](https://github.com/user-attachments/assets/78fb6f9a-c598-42d2-9dc0-b66190b10cb9)
  ![image](https://github.com/user-attachments/assets/23ac9afb-5a75-4c1b-8095-5e29ea8ff5d3)
 
