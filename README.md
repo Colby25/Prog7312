@@ -32,8 +32,8 @@ The project was built in .NET Core MVC web application, its main goal is to enab
     • Local events and anouncements (implemented)
 ![Screenshot (534)](https://github.com/user-attachments/assets/bf15f0e7-50c1-479a-9cef-c7be2ef3c807)
 
-3. ### Report Issues: Issues can be reported through the following:
-   •	Location input: a simble textbox for users to input the location of the issue
+3.  ### Report Issues: Issues can be reported through the following:
+   •	Location input: a simble textbox for users to input the location of the issue.
    
    •	Category selection: A dropdown for selecting the following categorys: sanitization, roads, utilities, infrastructure.
    
@@ -69,7 +69,7 @@ The project was built in .NET Core MVC web application, its main goal is to enab
     • Specify a start ID for graph traversal, and the BFS traversal results will be shown.
   
    # In-depth Explanation of Data Structures: 
-1.	Binary Search Tree (BST) Explanation:
+1.	## Binary Search Tree (BST) Explanation:
 	#### Role:
 	Service requests are efficiently managed and stored through the use of a binary search tree. Every node represents a unique identifier which is the service request ID and the data associated with it, for 
   example, the description & status. 
@@ -85,7 +85,7 @@ The project was built in .NET Core MVC web application, its main goal is to enab
   “Service Request ID: 5”
 	This is because the Search method in the BST found 4 and then fetched related requests from the graph via GetConnections(4) (which returns 1 and 5 due to the edges defined in the graph).
 
-3.	Graph Traversal using Breadth-First Search (BFS) Explanation:
+3.	## Graph Traversal using Breadth-First Search (BFS) Explanation:
   #### Role:	
   Relationships between the service request are represented through the use of a graph data structure, in this case where nodes are service requests and edges represent connections, like related tasks for 
   example. These connections are explored layer by layer using Breadth first search, and the start point is from the node that’s specified / or known as the service request in this scenario.
